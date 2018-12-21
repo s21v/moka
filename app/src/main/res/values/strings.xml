@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">魔咔</string>
+    <string name="login">登 陆</string>
+    <string name="phone_num">手机号</string>
+    <string name="password">密\u3000码</string>
+    <string name="auth_code">验证码</string>
+    <string name="login_password">密码登陆</string>
+    <string name="login_authcode">验证码登陆</string>
+    <string name="verificationCodeLogin">验证码登录</string>
+    <string name="vertificationCode">验证码</string>
+    <string name="sendVertificationCode">发送验证码</string>
+</resources>

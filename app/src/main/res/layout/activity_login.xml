@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity"
+        android:paddingLeft="56dp"
+        android:paddingRight="56dp">
+
+    <!-- 手机号输入栏 -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal" android:layout_above="@id/codeRow"
+                  android:id="@+id/phoneNumRow"
+                  android:layout_marginBottom="8dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:text="@string/phone_num" android:textStyle="bold" android:layout_marginEnd="8dp"
+                  android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:background="@drawable/editview_frame_bg"
+                  android:id="@+id/phoneNum"/>
+    </LinearLayout>
+
+    <!-- 密码/验证码 输入栏 -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/codeRow"
+                 android:layout_above="@id/verificationCodeLogin">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/passwordRow"
+                      android:visibility="gone">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="@string/password" android:textStyle="bold" android:layout_marginEnd="8dp"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:background="@drawable/editview_frame_bg"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/vertificationCodeRow">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="@string/vertificationCode" android:textStyle="bold" android:layout_marginEnd="8dp"
+                      android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal">
+                <EditText android:layout_width="0dp" android:layout_height="wrap_content"
+                          android:background="@drawable/editview_frame_bg" android:layout_weight="1"/>
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/sendVertificationCode"
+                        android:textColor="@android:color/black"
+                        android:background="@drawable/editview_frame_bg"
+                        android:minHeight="0dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/verificationCodeLogin"
+              android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+              android:textColor="@color/colorPrimaryDark"
+              android:id="@+id/verificationCodeLogin"
+              android:layout_alignEnd="@id/codeRow"
+              android:layout_marginTop="8dp"
+              android:layout_centerVertical="true"/>
+
+    <Button android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/login_button_bg"
+            android:layout_marginTop="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:minHeight="0dp"
+            android:text="登\u3000录"
+            android:textColor="@android:color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/verificationCodeLogin"/>
+</RelativeLayout>
